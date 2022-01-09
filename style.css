@@ -10,13 +10,64 @@ h1 {
     font-size: 2rem;
 }
 
-button {
-    background-color: rgba(0,0,0,0);
-    border: 1px solid black;
-    border-radius: 100px;
-    padding: 16px 32px; 
-    font-size: 16px;
+p {
+    margin-bottom: 48px;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta {
+    position: relative;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+  }
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: #FEEFED;
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+  .cta span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  .cta:hover:before {
+    width: 100%;
+    background: FEEFED;
+  }
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  .cta:active {
+    transform: scale(0.96);
+  }
+  
 
 .container {
     max-width: 1000px;
@@ -146,15 +197,24 @@ button {
 
 .separator {
     grid-column: span 12;
-    height: 0px;
+    height: 80px;
 }
 
 .text-block {
     grid-column: span 12;
+    margin: 48px 0;
 }
 
 .banner {
+    height: 500px;
     grid-column: span 12;
+    background-color: #F7F9FA;
+    margin: 128px -500% 0 -500%;
+    padding: 0 500% !important;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
