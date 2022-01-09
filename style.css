@@ -1,0 +1,163 @@
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+button {
+    background-color: rgba(0,0,0,0);
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 16px 32px; 
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 8px;
+    grid-auto-flow: row;
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-items: stretch;
+    justify-content: center;
+}
+
+.hero-left {
+    grid-column: span 12;
+    margin-top: 10%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hero-left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;    
+    top: 4rem;
+    left: -5px;
+    background: #FEEFED;
+    z-index: -1;
+}
+
+.hero-right {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-right div {
+    width: 100%;
+}
+
+.hero-bar-row {
+    display: flex;
+}
+
+.hero-bar {
+    height: 3.5rem;
+    border-radius: 100px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+.green-bar {
+    background-color: #8DD7CF;
+    width: fit-content;
+    padding-right: 32px;
+    padding-left: 96px;
+    position: relative;
+    right: 96px;
+    margin-top: 0;
+    overflow: hidden;
+    
+}
+
+.orange-bar {
+    background-color: #F3C19D;
+    width: 300px;
+    flex-grow: 1;
+    position: relative;
+    right: 50px;
+}
+
+.filler-orange {
+    flex-grow: 5;
+}
+
+.blue-bar {
+    background-color: #96C3EC;
+    width: 250px;
+    flex-grow: 1;
+    position: relative;
+    right: 150px;
+}
+
+.filler-blue {
+    flex-grow: 5;
+}
+
+#static-title {
+    position: relative;
+    z-index: 5;
+}
+
+.separator {
+    grid-column: span 12;
+    height: 0px;
+}
+
+.text-block {
+    grid-column: span 12;
+}
+
+.banner {
+    grid-column: span 12;
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .hero-left, .hero-right {
+        grid-column: span 6;
+    }
+
+    .hero-right div {
+        width: 66%;
+    }
+
+    .separator {
+        height: 256px;
+    }
+
+    .text-block {
+        grid-column: span 4;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+}
+
